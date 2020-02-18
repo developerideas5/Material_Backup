@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.phone.OS"/>
+<fullyQualifiedTypeName name="com.phone.Android"/>
+<fullyQualifiedTypeName name="com.phone.WindowsOS"/>
+<fullyQualifiedTypeName name="com.phone.OperatingSystemFactory"/>
+<fullyQualifiedTypeName name="com.phone.builder.Phone"/>
+<fullyQualifiedTypeName name="com.phone.builder.PhoneBuilder"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.abstractdesign.patterm.Bank"/>
+<fullyQualifiedTypeName name="com.abstractdesign.patterm.loan.Loan"/>
+<fullyQualifiedTypeName name="com.prototype.design.Prototype"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.phone.builder&apos; to &apos;FactoryDesignPattern/src&apos;&#x0D;&#x0A;- Original project: &apos;BuilderDesignPattern&apos;&#x0D;&#x0A;- Destination element: &apos;FactoryDesignPattern/src&apos;&#x0D;&#x0A;- Original element: &apos;BuilderDesignPattern/src/com.phone.builder&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=FactoryDesignPattern/src" element1="/src&lt;com.phone.builder" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1553514381207" version="1.0"/>
+</session>

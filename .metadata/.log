@@ -1,0 +1,1879 @@
+!SESSION 2016-10-12 17:56:39.051 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-10-12 17:57:54.052
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-10-12 17:59:11.466
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-10-12 17:59:11.490
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2016-10-12 17:59:15.029
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because of a conflicting dependency.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse JSjet 1.4.2.201610070900 (com.genuitec.eclipse.webclipse.jsjet.feature.feature.group 1.4.2.201610070900)
+Contains: Software currently installed: Tern server node.js feature 1.2.0.201609202054 (tern-server-nodejs-feature.feature.group 1.2.0.201609202054)
+Contains: Only one of the following can be installed at once: 
+Contains: Tern Node.js Eclipse - UI 1.2.0.201610070851 (tern.eclipse.ide.server.nodejs.ui 1.2.0.201610070851)
+Contains: Tern Node.js Eclipse - UI 1.2.0.201609202054 (tern.eclipse.ide.server.nodejs.ui 1.2.0.201609202054)
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse JSjet 1.4.2.201610070900 (com.genuitec.eclipse.webclipse.jsjet.feature.feature.group 1.4.2.201610070900)
+Contains: To: tern-server-nodejs-feature.feature.group [1.2.0.201610070851]
+Contains: Cannot satisfy dependency:
+Contains: From: Tern server node.js feature 1.2.0.201609202054 (tern-server-nodejs-feature.feature.group 1.2.0.201609202054)
+Contains: To: tern.eclipse.ide.server.nodejs.ui [1.2.0.201609202054]
+Contains: Cannot satisfy dependency:
+Contains: From: Tern server node.js feature 1.2.0.201610070851 (tern-server-nodejs-feature.feature.group 1.2.0.201610070851)
+Contains: To: tern.eclipse.ide.server.nodejs.ui [1.2.0.201610070851]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-10-12 17:59:15.030
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE Software being installed: Webclipse JSjet 1.4.2.201610070900 (com.genuitec.eclipse.webclipse.jsjet.feature.feature.group 1.4.2.201610070900)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE Software currently installed: Tern server node.js feature 1.2.0.201609202054 (tern-server-nodejs-feature.feature.group 1.2.0.201609202054)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-12 17:59:15.030
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE Tern Node.js Eclipse - UI 1.2.0.201610070851 (tern.eclipse.ide.server.nodejs.ui 1.2.0.201610070851)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE Tern Node.js Eclipse - UI 1.2.0.201609202054 (tern.eclipse.ide.server.nodejs.ui 1.2.0.201609202054)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-12 17:59:15.030
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE From: Webclipse JSjet 1.4.2.201610070900 (com.genuitec.eclipse.webclipse.jsjet.feature.feature.group 1.4.2.201610070900)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE To: tern-server-nodejs-feature.feature.group [1.2.0.201610070851]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-12 17:59:15.030
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE From: Tern server node.js feature 1.2.0.201609202054 (tern-server-nodejs-feature.feature.group 1.2.0.201609202054)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE To: tern.eclipse.ide.server.nodejs.ui [1.2.0.201609202054]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-12 17:59:15.030
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE From: Tern server node.js feature 1.2.0.201610070851 (tern-server-nodejs-feature.feature.group 1.2.0.201610070851)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-12 17:59:15.030
+!MESSAGE To: tern.eclipse.ide.server.nodejs.ui [1.2.0.201610070851]
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-10-12 18:50:24.490
+!MESSAGE Could not auto-share project FactoryDesignPattern
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'FactoryDesignPattern'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-10-12 18:50:24.491
+!MESSAGE Provided SVN information does not match that on disk for project 'FactoryDesignPattern'.
+
+!ENTRY org.eclipse.ui 2 2 2016-10-12 18:51:05.454
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-10-13 11:01:20.706
+!MESSAGE Could not auto-share project BuilderDesignPattern
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'BuilderDesignPattern'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-10-13 11:01:20.706
+!MESSAGE Provided SVN information does not match that on disk for project 'BuilderDesignPattern'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-10-13 11:53:04.533
+!MESSAGE Could not auto-share project AbstractDesignPattern
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'AbstractDesignPattern'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-10-13 11:53:04.533
+!MESSAGE Provided SVN information does not match that on disk for project 'AbstractDesignPattern'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-10-13 14:50:27.872
+!MESSAGE Could not auto-share project SingeltonDesignPattern
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'SingeltonDesignPattern'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-10-13 14:50:27.873
+!MESSAGE Provided SVN information does not match that on disk for project 'SingeltonDesignPattern'.
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-10-13 15:28:08.637
+!MESSAGE An internal error occurred during: "SQL Statement Execution".
+!STACK 0
+java.lang.NullPointerException
+	at java.util.Hashtable.get(Unknown Source)
+	at org.eclipse.datatools.sqltools.result.ResultManager.getInstance(ResultManager.java:149)
+	at org.eclipse.datatools.sqltools.result.ResultsViewAPI.saveParentElapseTime(ResultsViewAPI.java:723)
+	at org.eclipse.datatools.sqltools.sqleditor.result.GroupSQLResultRunnable.run(GroupSQLResultRunnable.java:307)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-10-14 19:09:16.863
+!MESSAGE Could not auto-share project PrototypeDesignPattern
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'PrototypeDesignPattern'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-10-14 19:09:16.864
+!MESSAGE Provided SVN information does not match that on disk for project 'PrototypeDesignPattern'.
+!SESSION 2018-07-07 14:38:54.072 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\DesignPatterns -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-07-07 14:39:10.149
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-07-07 14:40:06.055
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-07-07 14:40:06.059
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2018-07-07 14:40:10.825
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse JavaScript Debugger 1.11.0.201805291139 (com.genuitec.eclipse.webclipse.jsdebugger.feature.feature.group 1.11.0.201805291139)
+Contains: Missing requirement: Genuitec Core 1.11.0.201805291134 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201805291134) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: JavaScript Debugger Commons 1.11.0.201805291139 (com.genuitec.eclipse.common.jsdebugger.feature.feature.group 1.11.0.201805291139)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group [1.2.0,2.0.0)
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse JavaScript Debugger 1.11.0.201805291139 (com.genuitec.eclipse.webclipse.jsdebugger.feature.feature.group 1.11.0.201805291139)
+Contains: To: com.genuitec.eclipse.common.jsdebugger.feature.feature.group [1.11.0.201805291139]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2018-07-07 14:40:10.825
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE Software being installed: Webclipse JavaScript Debugger 1.11.0.201805291139 (com.genuitec.eclipse.webclipse.jsdebugger.feature.feature.group 1.11.0.201805291139)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201805291134 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201805291134) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-07-07 14:40:10.825
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE From: JavaScript Debugger Commons 1.11.0.201805291139 (com.genuitec.eclipse.common.jsdebugger.feature.feature.group 1.11.0.201805291139)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group [1.2.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-07-07 14:40:10.825
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE From: Webclipse JavaScript Debugger 1.11.0.201805291139 (com.genuitec.eclipse.webclipse.jsdebugger.feature.feature.group 1.11.0.201805291139)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-07-07 14:40:10.825
+!MESSAGE To: com.genuitec.eclipse.common.jsdebugger.feature.feature.group [1.11.0.201805291139]
+
+!ENTRY org.eclipse.ui 2 2 2018-07-07 14:40:58.386
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+!SESSION 2018-08-19 13:00:04.838 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2018-08-19 13:00:18.090
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2018-08-19 13:00:18.359
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-19 13:01:25.673
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2018-08-19 13:08:45.034
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-08-19 13:08:48.596
+!MESSAGE An internal error occurred during: "Updating Webclipse...".
+!STACK 0
+java.lang.IllegalStateException: BundleContext is no longer valid
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.checkValid(BundleContextImpl.java:983)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getServiceReference(BundleContextImpl.java:559)
+	at org.eclipse.equinox.internal.p2.core.helpers.ServiceHelper.getService(ServiceHelper.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getSharedPreferences(AbstractRepositoryManager.java:512)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1016)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getRepositoryProperty(AbstractRepositoryManager.java:564)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:686)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-08-19 13:08:48.608
+!MESSAGE An internal error occurred during: "Updating Webclipse...".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.webclipse.evergreen.internal.P2Utils.getProvisioningAgent(P2Utils.java:23)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.P2Utils.getProfileRegistry(P2Utils.java:33)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:134)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2019-03-07 18:55:57.825 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-03-07 18:58:44.029
+!MESSAGE Caught exception in FS.readPipe()
+!STACK 0
+java.io.IOException: Cannot run program "bash" (in directory "C:\Users\Daffidols"): CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.jgit.util.FS.readPipe(FS.java:431)
+	at org.eclipse.jgit.util.FS_Win32.discoverGitPrefix(FS_Win32.java:113)
+	at org.eclipse.jgit.util.FS.gitPrefix(FS.java:517)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.checkGitPrefix(ConfigurationChecker.java:69)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.check(ConfigurationChecker.java:61)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.access$0(ConfigurationChecker.java:60)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1$1.run(ConfigurationChecker.java:48)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 35 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-07 18:58:44.151
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-07 18:58:44.152
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2019-03-07 19:00:41.250
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-07 19:00:41.252
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-07 19:00:43.128
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-07 19:00:43.380
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2019-03-07 19:00:48.178
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse Emmet 1.11.0.201808131414 (com.genuitec.eclipse.webclipse.emmet.feature.feature.group 1.11.0.201808131414)
+Contains: Missing requirement: Genuitec Core 1.11.0.201808131409 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201808131409) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: Emmet Commons 1.11.0.201808131414 (com.genuitec.eclipse.common.emmet.feature.feature.group 1.11.0.201808131414)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse Emmet 1.11.0.201808131414 (com.genuitec.eclipse.webclipse.emmet.feature.feature.group 1.11.0.201808131414)
+Contains: To: com.genuitec.eclipse.common.emmet.feature.feature.group [1.11.0.201808131414]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-03-07 19:00:48.179
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE Software being installed: Webclipse Emmet 1.11.0.201808131414 (com.genuitec.eclipse.webclipse.emmet.feature.feature.group 1.11.0.201808131414)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201808131409 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201808131409) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-07 19:00:48.179
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE From: Emmet Commons 1.11.0.201808131414 (com.genuitec.eclipse.common.emmet.feature.feature.group 1.11.0.201808131414)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-07 19:00:48.179
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE From: Webclipse Emmet 1.11.0.201808131414 (com.genuitec.eclipse.webclipse.emmet.feature.feature.group 1.11.0.201808131414)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:48.179
+!MESSAGE To: com.genuitec.eclipse.common.emmet.feature.feature.group [1.11.0.201808131414]
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2019-03-07 19:00:54.237
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-03-07 19:00:54.237
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-07 19:00:54.237
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-07 19:00:54.237
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-07 19:00:54.237
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-07 19:00:54.237
+!MESSAGE To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+
+!ENTRY org.eclipse.ui 2 2 2019-03-07 19:21:12.603
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+!SESSION 2019-03-25 10:42:24.208 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-03-25 10:43:46.077
+!MESSAGE Caught exception in FS.readPipe()
+!STACK 0
+java.io.IOException: Cannot run program "bash" (in directory "C:\Users\Daffidols"): CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.jgit.util.FS.readPipe(FS.java:431)
+	at org.eclipse.jgit.util.FS_Win32.discoverGitPrefix(FS_Win32.java:113)
+	at org.eclipse.jgit.util.FS.gitPrefix(FS.java:517)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.checkGitPrefix(ConfigurationChecker.java:69)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.check(ConfigurationChecker.java:61)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker.access$0(ConfigurationChecker.java:60)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1$1.run(ConfigurationChecker.java:48)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 35 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-25 10:43:46.138
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-25 10:43:46.140
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2019-03-25 10:44:00.621
+!MESSAGE org.dom4j.DocumentException: Error on line 129 of document file:/C:/DesignPatterns/.metadata/.plugins/com.genuitec.eclipse.webclipse.dashboard/news.rss : Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>". Nested exception: Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>".
+!STACK 0
+it.sauronsoftware.feed4j.FeedXMLParseException: org.dom4j.DocumentException: Error on line 129 of document file:/C:/DesignPatterns/.metadata/.plugins/com.genuitec.eclipse.webclipse.dashboard/news.rss : Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>". Nested exception: Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>".
+	at it.sauronsoftware.feed4j.FeedParser.parse(FeedParser.java:53)
+	at com.genuitec.eclipse.dashboard.common.rss.NewsRSSManager.getFeedFromFile(NewsRSSManager.java:73)
+	at com.genuitec.eclipse.dashboard.common.rss.NewsRSSManager.obtainRSS(NewsRSSManager.java:59)
+	at com.genuitec.eclipse.webclipse.dashboard.editor.NewItemsCompositeController.<init>(NewItemsCompositeController.java:41)
+	at com.genuitec.eclipse.webclipse.dashboard.editor.WebclipseDashboardEditor.createNewItemsComposite(WebclipseDashboardEditor.java:257)
+	at com.genuitec.eclipse.webclipse.dashboard.editor.WebclipseDashboardEditor.createBaseComposite(WebclipseDashboardEditor.java:202)
+	at com.genuitec.eclipse.webclipse.dashboard.editor.WebclipseDashboardEditor.createPartControl(WebclipseDashboardEditor.java:137)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:95)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:488)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:454)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:705)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:392)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1145)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3210)
+	at org.eclipse.ui.internal.WorkbenchPage.access$23(WorkbenchPage.java:3125)
+	at org.eclipse.ui.internal.WorkbenchPage$9.run(WorkbenchPage.java:3107)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3102)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3066)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3047)
+	at com.genuitec.eclipse.webclipse.dashboard.ui.actions.ShowDashboardAction.run(ShowDashboardAction.java:57)
+	at com.genuitec.eclipse.webclipse.dashboard.WebclipseDashboardPlugin$1$1.run(WebclipseDashboardPlugin.java:90)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:167)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:165)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: org.dom4j.DocumentException: Error on line 129 of document file:/C:/DesignPatterns/.metadata/.plugins/com.genuitec.eclipse.webclipse.dashboard/news.rss : Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>". Nested exception: Element type "guidmaLink" must be followed by either attribute specifications, ">" or "/>".
+	at org.dom4j.io.SAXReader.read(SAXReader.java:482)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:291)
+	at it.sauronsoftware.feed4j.FeedParser.parse(FeedParser.java:37)
+	... 92 more
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2019-03-25 10:45:20.836
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$9.run(MarketplaceCatalog.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-25 10:45:20.839
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-25 10:46:32.741
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-25 10:46:33.181
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2019-03-25 10:46:40.020
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-03-25 10:46:40.020
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-25 10:46:40.020
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-25 10:46:40.020
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-25 10:46:40.020
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-25 10:46:40.020
+!MESSAGE To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2019-03-25 10:54:35.959
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2019-03-25 10:54:35.959
+!MESSAGE session context was:(profile=epp.package.jee, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,javaewah,1.1.6.v20160919-1400
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,net.i2p.crypto.eddsa,0.3.0.v20181102-1323
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.apache.sshd.core,2.0.0.v20181102-1323
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.apache.sshd.sftp,2.0.0.v20181102-1323
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.bouncycastle.bcpg,1.60.0.v20181210-2057
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.bouncycastle.bcprov,1.60.0.v20181210-2057
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.ssh.apache,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-25 10:54:35.959
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit.ssh.apache,5.3.0.201903130848-r
+
+!ENTRY org.eclipse.ui 2 2 2019-03-25 11:02:28.810
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-25 12:51:17.476
+!MESSAGE An exception occurred during push on URI file:///C:\Users\Daffidols\Documents\projects\jee: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:171)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:131)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:106)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:561)
+	at org.eclipse.jgit.transport.Transport.openAll(Transport.java:490)
+	at org.eclipse.jgit.transport.Transport.openAll(Transport.java:382)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:144)
+	... 4 more
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-25 12:52:02.701
+!MESSAGE An exception occurred during push on URI file:///C:\Users\Daffidols\Documents\projects\jee: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:131)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:106)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:561)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:532)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:192)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 12:52:20.407
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-25 12:52:37.927
+!MESSAGE An exception occurred during push on URI file:///C:\Users\Daffidols\Documents\projects\jee: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:131)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:106)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:561)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:532)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:192)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 12:52:48.088
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-25 13:16:42.391
+!MESSAGE An exception occurred during push on URI file:///C:\Users\Daffidols\Documents\projects\jee: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:131)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:106)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:561)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:532)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:192)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:45.323
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:46.361
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:47.068
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:47.302
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-03-25 13:16:53.889
+!MESSAGE An exception occurred during push on URI file:///C:\Users\Daffidols\Documents\projects\jee: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\Daffidols\Documents\projects\jee: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:131)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:106)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:561)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:532)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:192)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:56.473
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:57.160
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-25 13:16:57.405
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.startPush(PushBranchWizard.java:231)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.performFinish(PushBranchWizard.java:143)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.egit.ui.internal.commit.CommitJob$2.run(CommitJob.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2019-03-28 21:39:57.156 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-03-28 21:43:03.129
+!MESSAGE Caught exception in FS.readPipe()
+!STACK 0
+java.io.IOException: Cannot run program "bash" (in directory "C:\Users\Daffidols"): CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.jgit.util.FS.readPipe(FS.java:431)
+	at org.eclipse.jgit.util.FS_Win32.discoverGitPrefix(FS_Win32.java:113)
+	at org.eclipse.jgit.util.FS.gitPrefix(FS.java:517)
+	at org.eclipse.jgit.util.SystemReader$Default.openSystemConfig(SystemReader.java:92)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:171)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.build(FileRepositoryBuilder.java:92)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.create(FileRepositoryBuilder.java:110)
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:55)
+	at org.eclipse.egit.ui.internal.repository.RepositoriesView.initRepositoriesAndListeners(RepositoriesView.java:492)
+	at org.eclipse.egit.ui.internal.repository.RepositoriesView.createCommonViewer(RepositoriesView.java:431)
+	at org.eclipse.ui.navigator.CommonNavigator.createPartControl(CommonNavigator.java:193)
+	at org.eclipse.egit.ui.internal.repository.RepositoriesView.createPartControl(RepositoriesView.java:355)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:155)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$6.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:69)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1246)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1078)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 124 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-28 21:43:31.661
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-28 21:43:31.664
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2019-03-28 21:44:59.455
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2019-03-28 21:44:59.456
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-28 21:45:51.045
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-03-28 21:45:51.736
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2019-03-28 21:45:56.689
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-03-28 21:45:56.689
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-28 21:45:56.689
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-28 21:45:56.689
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-03-28 21:45:56.689
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-03-28 21:45:56.689
+!MESSAGE To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:17.186
+!MESSAGE Could not auto-share project ajjax
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'ajjax'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:17.187
+!MESSAGE Provided SVN information does not match that on disk for project 'ajjax'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.119
+!MESSAGE Could not auto-share project FirstAngularJS
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'FirstAngularJS'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.119
+!MESSAGE Provided SVN information does not match that on disk for project 'FirstAngularJS'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.129
+!MESSAGE Could not auto-share project FirstJPA
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'FirstJPA'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.129
+!MESSAGE Provided SVN information does not match that on disk for project 'FirstJPA'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.146
+!MESSAGE Could not auto-share project HelloWorldServlet
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'HelloWorldServlet'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.147
+!MESSAGE Provided SVN information does not match that on disk for project 'HelloWorldServlet'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.157
+!MESSAGE Could not auto-share project HibernateBegins
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'HibernateBegins'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.158
+!MESSAGE Provided SVN information does not match that on disk for project 'HibernateBegins'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.168
+!MESSAGE Could not auto-share project JavaBeanExample
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'JavaBeanExample'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.168
+!MESSAGE Provided SVN information does not match that on disk for project 'JavaBeanExample'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.179
+!MESSAGE Could not auto-share project SecondAngularJS
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'SecondAngularJS'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.179
+!MESSAGE Provided SVN information does not match that on disk for project 'SecondAngularJS'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.186
+!MESSAGE Could not auto-share project Servers
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'Servers'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.186
+!MESSAGE Provided SVN information does not match that on disk for project 'Servers'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.192
+!MESSAGE Could not auto-share project TestAssertions
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'TestAssertions'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.193
+!MESSAGE Provided SVN information does not match that on disk for project 'TestAssertions'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.198
+!MESSAGE Could not auto-share project XMLDemo
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'XMLDemo'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.199
+!MESSAGE Provided SVN information does not match that on disk for project 'XMLDemo'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 21:48:18.204
+!MESSAGE Could not auto-share project undo_manager
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'undo_manager'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 21:48:18.204
+!MESSAGE Provided SVN information does not match that on disk for project 'undo_manager'.
+
+!ENTRY org.eclipse.wst.validation 4 0 2019-03-28 21:48:34.822
+!MESSAGE Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+	at org.eclipse.wst.validation.internal.ValidatorExtensionReader.process(ValidatorExtensionReader.java:86)
+	at org.eclipse.wst.validation.internal.ExtensionValidators.<init>(ExtensionValidators.java:43)
+	at org.eclipse.wst.validation.internal.ExtensionValidators.instance(ExtensionValidators.java:36)
+	at org.eclipse.wst.validation.internal.ValManager.getV2Validators(ValManager.java:345)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:221)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1256)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:745)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.startingValidation(ValBuilderJob.java:148)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:122)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.wst.validation 4 0 2019-03-28 21:48:34.822
+!MESSAGE Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+
+!ENTRY org.eclipse.wst.xml.search.editor 4 0 2019-03-28 21:48:50.048
+!MESSAGE   Could not load contentAssists for id: jetty.default.info
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in org.eclipse.jst.server.jetty.xml.ui was unable to load class org.eclipse.jst.server.jetty.xml.ui.internal.contentassist.JettyContentAssistAdditionalProposalInfoProvider.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.addContentAssists(ContentAssistsManager.java:66)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.loadContentAssists(ContentAssistsManager.java:100)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.getProvider(ContentAssistsManager.java:82)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencePathFactory.getAdditionalProposalInfoProvider(XMLReferencePathFactory.java:232)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencePathFactory.createTo(XMLReferencePathFactory.java:159)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.parseReferenceDecl(XMLReferencesManager.java:279)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.addXMLReferences(XMLReferencesManager.java:248)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.loadXMLReferences(XMLReferencesManager.java:218)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.loadXMLReferencesIfNeeded(XMLReferencesManager.java:388)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.getXMLReferenceContainer(XMLReferencesManager.java:367)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.performValidation(XMLReferencesBatchValidator.java:277)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.validateFile(XMLReferencesBatchValidator.java:107)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator$2.run(XMLReferencesBatchValidator.java:251)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5358)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.validate(XMLReferencesBatchValidator.java:263)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1159)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValManager$1.visit(ValManager.java:665)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:810)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:669)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:299)
+	at org.eclipse.core.internal.resources.Resource$2.visit(Resource.java:126)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:127)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:95)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:52)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:124)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:108)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.fullBuild(ValBuilderJob.java:219)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:178)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.jst.server.jetty.xml.ui.internal.contentassist.JettyContentAssistAdditionalProposalInfoProvider cannot be found by org.eclipse.jst.server.jetty.xml.ui_1.0.0.201410302229
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:432)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 43 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2019-03-28 21:48:50.049
+!MESSAGE Plug-in org.eclipse.jst.server.jetty.xml.ui was unable to load class org.eclipse.jst.server.jetty.xml.ui.internal.contentassist.JettyContentAssistAdditionalProposalInfoProvider.
+!STACK 0
+java.lang.ClassNotFoundException: org.eclipse.jst.server.jetty.xml.ui.internal.contentassist.JettyContentAssistAdditionalProposalInfoProvider cannot be found by org.eclipse.jst.server.jetty.xml.ui_1.0.0.201410302229
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:432)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.addContentAssists(ContentAssistsManager.java:66)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.loadContentAssists(ContentAssistsManager.java:100)
+	at org.eclipse.wst.xml.search.editor.internal.contentassist.ContentAssistsManager.getProvider(ContentAssistsManager.java:82)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencePathFactory.getAdditionalProposalInfoProvider(XMLReferencePathFactory.java:232)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencePathFactory.createTo(XMLReferencePathFactory.java:159)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.parseReferenceDecl(XMLReferencesManager.java:279)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.addXMLReferences(XMLReferencesManager.java:248)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.loadXMLReferences(XMLReferencesManager.java:218)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.loadXMLReferencesIfNeeded(XMLReferencesManager.java:388)
+	at org.eclipse.wst.xml.search.editor.internal.references.XMLReferencesManager.getXMLReferenceContainer(XMLReferencesManager.java:367)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.performValidation(XMLReferencesBatchValidator.java:277)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.validateFile(XMLReferencesBatchValidator.java:107)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator$2.run(XMLReferencesBatchValidator.java:251)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5358)
+	at org.eclipse.wst.xml.search.editor.validation.XMLReferencesBatchValidator.validate(XMLReferencesBatchValidator.java:263)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1159)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValManager$1.visit(ValManager.java:665)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:810)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:669)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:299)
+	at org.eclipse.core.internal.resources.Resource$2.visit(Resource.java:126)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:127)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:95)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:52)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:124)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:108)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.fullBuild(ValBuilderJob.java:219)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:178)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 22:02:38.966
+!MESSAGE Could not auto-share project Lab-6_Algorithms
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'Lab-6_Algorithms'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 22:02:38.967
+!MESSAGE Provided SVN information does not match that on disk for project 'Lab-6_Algorithms'.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-03-28 22:02:39.000
+!MESSAGE Could not auto-share project Lab-7_AdvancedConcepts
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'Lab-7_AdvancedConcepts'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-03-28 22:02:39.000
+!MESSAGE Provided SVN information does not match that on disk for project 'Lab-7_AdvancedConcepts'.
+
+!ENTRY org.eclipse.ui 2 2 2019-03-28 22:44:03.384
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
+!SESSION 2020-02-18 22:05:45.855 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\DesignPatterns -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-18 22:06:09.354
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Daffidols'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.validation 4 0 2020-02-18 22:06:19.622
+!MESSAGE Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+	at org.eclipse.wst.validation.internal.ValidatorExtensionReader.process(ValidatorExtensionReader.java:86)
+	at org.eclipse.wst.validation.internal.ExtensionValidators.<init>(ExtensionValidators.java:43)
+	at org.eclipse.wst.validation.internal.ExtensionValidators.instance(ExtensionValidators.java:36)
+	at org.eclipse.wst.validation.internal.ValManager.getV2Validators(ValManager.java:345)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:221)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1256)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:745)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.startingValidation(ValBuilderJob.java:148)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:122)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.wst.validation 4 0 2020-02-18 22:06:19.624
+!MESSAGE Plug-in configuration error, extension "com.genuitec.eclipse.javascript.tern.defaultExclusionFilters" references validator id "org.eclipse.wst.json.core.json" but this id does not exist.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2020-02-18 22:06:56.621
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:259)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2020-02-18 22:06:56.621
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2020-02-18 22:07:54.401
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2020-02-18 22:07:54.700
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Daffidols\Downloads\software\eclipse\plugins\configuration.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2020-02-18 22:08:00.945
+!MESSAGE Cannot perform the update. Failed to compute provisioning plan.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete the install because one or more required items could not be found.
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+Contains: Cannot satisfy dependency:
+Contains: From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+Contains: Cannot satisfy dependency:
+Contains: From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+Contains: To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-02-18 22:08:00.945
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE Software being installed: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE Missing requirement: Genuitec Core 1.11.0.201810241358 (com.genuitec.eclipse.common.core.feature.feature.group 1.11.0.201810241358) requires 'org.eclipse.platform.feature.group [4.5.0,5.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-18 22:08:00.945
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE From: DevSearch Commons 1.11.0.201810241404 (com.genuitec.eclipse.common.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE To: com.genuitec.eclipse.common.core.feature.feature.group 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-18 22:08:00.945
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE From: Webclipse DevSearch 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.devsearch.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE To: com.genuitec.eclipse.common.devsearch.feature.feature.group [1.11.0.201810241404]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-18 22:08:00.945
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE From: Webclipse Navigation & Research Aides 1.11.0.201810241404 (com.genuitec.eclipse.webclipse.navigation.feature.feature.group 1.11.0.201810241404)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-18 22:08:00.945
+!MESSAGE To: com.genuitec.eclipse.webclipse.devsearch.feature.feature.group [1.11.0.201810241404]
+
+!ENTRY org.eclipse.ui 2 2 2020-02-18 22:08:20.410
+!MESSAGE Invalid property category path: myeclipse.root (bundle: com.palantir.typescript, propertyPage: com.palantir.typescript.typeScriptPropertyPage)
